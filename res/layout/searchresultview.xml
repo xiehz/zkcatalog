@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poi_detail"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    android:background="@drawable/border_bg"
+    android:gravity="center_vertical">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+        android:weightSum="1"
+        android:baselineAligned="false"
+        android:showDividers="middle|beginning|end"
+        android:divider="@color/black">
+
+        <TextView
+            android:id="@+id/poi_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:text=""
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/grey"
+        android:id="@+id/linearLayout2"></LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:showDividers="middle|beginning|end"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/zk_catalog"
+                android:text="基本信息"
+                android:layout_below="@+id/poi_name"
+                android:layout_toEndOf="@+id/poi_name"
+                android:layout_weight="5"
+                android:layout_gravity="left"
+                android:textSize="15sp"
+                android:background="@color/transparent"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:text="数据录入"
+                android:onClick="onStartZKCatalog"
+                android:layout_below="@+id/poi_name"
+                android:layout_toEndOf="@+id/poi_name"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:enabled="true"
+                android:singleLine="false"
+                android:background="@android:color/transparent"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
